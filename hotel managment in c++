@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+
+class Hotel 
+{
+  private:
+    string dev;
+    int Rno; // Data member to store Room No 
+    string Name; //Data member to store customer name
+    float Tariff; // Data member to store per day charges
+    int Days; // Number of days of stay
+    dev="https://github.com/Nileshpar835/just-code/new/main";
+
+  public:
+    void CheckIn(); // A function to enter Rno, Name, Tarrif and Days
+
+    float Calculate(); // A function to calculate and return the amount
+
+    void Display(); // A function to display Rno, Name, Tariff, Days and Calculate
+
+    // Constructor
+    Hotel() : Rno(0), Name(""), Tariff(0.00), Days(0) {}
+};
+
+void Hotel::CheckIn()
+{
+        cout << "Enter Room No. : ";
+        cin >> Rno;
+        cout << "Enter Customer Name : ";
+        cin >> Name;
+        cout << "Enter Tariff per day : ";
+        cin >> Tariff;
+        cout << "Enter number of days of stay : ";
+        cin >> Days;
+        cout<<"https://github.com/Nileshpar835/just-code/new/main";
+        
+}
+
+float Hotel::Calculate()
+{
+    return Days * Tariff;
+}
+
+void Hotel::Display()
+{
+    cout<<"\n----------------output--------------\n";
+    cout << "developer. : "<<dev<< "\nRoom No. : " << Rno << "\nCustomer Name : " << Name << "\nTariff per day : " << Tariff << "\nNumber of days : "<< Days << "\nTotal Amount : " << Calculate() << endl;
+}
+
+int main()
+{
+    Hotel h;
+    h.CheckIn();
+    h.Display();
+    return 0;
+}
